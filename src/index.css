@@ -70,7 +70,15 @@
   * {
     @apply border-border;
   }
+  html{
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }
+}
+#herosection{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.2)), url("./assets/herobackground.jpg") ;
+  background-position: center;
+  background-size: cover;
 }
