@@ -9,16 +9,19 @@ function SkillSection() {
     },
   ];
   return (
-    <div className="bg-slate-100 min-h-dvh flex items-center justify-around flex-col">
-      <h1 className="text-4xl text-gray-700">
-        My <span className="text-blue-700">Skills</span> Section
-      </h1>
-      <div className="w-[90%] border border-red-400 flex items-center justify-center flex-wrap">
-        <SkillCard {...skillList[0]} />
-        <SkillCard {...skillList[0]} />
-        <SkillCard {...skillList[0]} />
-        <SkillCard {...skillList[0]} />
-        <SkillCard {...skillList[0]} />
+    <div className="bg-slate-100 dark:bg-slate-900">
+      <div className="h-full bg-slate-100 w-[90%] max-w-7xl m-auto min-h-dvh  dark:bg-slate-900 flex items-center justify-around flex-col">
+        <h1 className=" text-4xl text-gray-700 dark:text-gray-300">
+          My <span className="text-blue-700 dark:text-white">Skills</span>{" "}
+          Section
+        </h1>
+        <div className="w-[90%] flex items-center justify-center flex-wrap">
+          <SkillCard {...skillList[0]} />
+          <SkillCard {...skillList[0]} />
+          <SkillCard {...skillList[0]} />
+          <SkillCard {...skillList[0]} />
+          <SkillCard {...skillList[0]} />
+        </div>
       </div>
     </div>
   );

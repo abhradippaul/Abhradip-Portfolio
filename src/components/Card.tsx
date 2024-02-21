@@ -1,9 +1,11 @@
 import { motion, useScroll} from "framer-motion";
 type Props = {
   image: string;
+  name : string
+  des : string
 };
 
-function Card(props: Props) {
+function Card({name,image,des} : Props) {
   // const { scrollYProgress } = useScroll();
   // console.log(scrollYProgress)
   return (
@@ -13,17 +15,15 @@ function Card(props: Props) {
     >
       <img
         className="w-full h-[40%] object-cover rounded-md"
-        src={props.image}
+        src={image}
         alt="image"
       />
 
       <h1 className="text-xl text-gray-700 font-semibold dark:text-white">
-        Frontend Developer
+        {name}
       </h1>
       <p className="dark:text-gray-300">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-        repellendus quas quam impedit in magnam commodi? Tempore quae eligendi
-        odit?
+        {des}
       </p>
     </motion.div>
   );

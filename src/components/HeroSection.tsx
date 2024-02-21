@@ -22,7 +22,7 @@ function HeroSection() {
     },
   };
   return (
-    <div className="dark:bg-slate-950">
+    <div className="dark:bg-slate-950 bg-slate-200">
       <motion.section
         variants={container}
         initial="hidden"
@@ -51,7 +51,7 @@ function HeroSection() {
             <button className="h-full font-semibold w-[40%]  bg-blue-800 hover:bg-blue-900 text-slate-200 rounded-md text-xl cursor-pointer dark:hover:bg-blue-700">
               Contact Me
             </button>
-            <button className=" h-full font-semibold bg-white rounded-md text-xl px-2 cursor-pointer dark:bg-slate-900 dark:hover:bg-slate-800">
+            <button className="h-full font-semibold bg-white hover:bg-slate-100 rounded-md text-xl px-2 cursor-pointer dark:bg-slate-900 dark:hover:bg-slate-800">
               Send Feedback
             </button>
           </div>

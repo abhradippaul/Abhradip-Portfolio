@@ -10,7 +10,7 @@ function PortfolioCategoryBtn({category, setCategory} : categoryProps) {
   return (
     <button
       onClick={onClickBtn}
-      className="p-1 px-2 font-semibold text-lg rounded-md bg-white hover:bg-blue-800 hover:text-slate-200 m-4 dark:bg-slate-900 dark:hover:bg-blue-700 dark:text-white"
+      className="p-1 px-2 font-semibold text-lg rounded-md bg-slate-200 hover:bg-blue-800 hover:text-slate-200 m-4 dark:bg-slate-900 dark:hover:bg-blue-700 dark:text-white"
     >
       {category.toUpperCase()}
     </button>

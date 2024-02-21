@@ -4,26 +4,30 @@ import HeroSection from "./components/HeroSection";
 import TypesOfWork from "./components/TypesOfWork";
 import PortfolioSection from "./components/PortfolioSection";
 import SkillSection from "./components/SkillSection";
+import Review from "./components/Review";
+import Contact from "./components/Contact";
 // import {ThemeContextProvider} from "./context/ThemeContext.js"
 
 function App() {
   // const [theme,setTheme] = useState<theme | true>()
   // setTheme(theme)
-  useEffect(()=> {
-    document.querySelector("html")?.classList.add("dark")
-  },[])
+  useEffect(() => {
+    // document.querySelector("html")?.classList.add("dark");
+  }, []);
   return (
     // <ThemeContextProvider value={{theme,setTheme}}>
-      <div className=" bg-slate-200 dark:bg-slate-800">
-        <div className="bg-slate-100 fixed left-0 right-0 top-0 z-50 shadow-sm dark:shadow-white dark:bg-slate-950">
+    <div className="">
+      <div className="bg-slate-100 fixed left-0 right-0 top-0 z-50 shadow-sm dark:shadow-white dark:bg-slate-900">
         <Navbar />
-        </div>
-        <HeroSection/>
-        <TypesOfWork />
-        <PortfolioSection />
-        <SkillSection />
       </div>
-    // </ThemeContextProvider> 
+      <HeroSection />
+      <TypesOfWork />
+      <PortfolioSection />
+      <SkillSection />
+      <Review />
+      <Contact />
+    </div>
+    // </ThemeContextProvider>
   );
 }
 

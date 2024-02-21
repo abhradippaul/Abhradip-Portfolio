@@ -41,7 +41,7 @@ function Navbar() {
   
   return (
     <motion.div variants={container} initial="hidden"
-    animate="visible" className="w-full h-[8vh] m-auto max-w-7xl p-4 flex items-center justify-between bg-slate-100 dark:bg-slate-800">
+    animate="visible" className="w-full h-[8vh] m-auto max-w-7xl p-4 flex items-center justify-between bg-slate-100 dark:bg-slate-900">
       {/* apply whileinview animation */}
       <motion.div variants={item} className="text-xl font-semibold tracking-wide z-10">
         <i
@@ -53,7 +53,7 @@ function Navbar() {
       <motion.div
       variants={item}
         id="sideMenu"
-        className="bg-slate-200 w-2/3 hidden px-4 absolute top-0 left-0 bottom-0 right-full sm:block font-semibold text-xl text-gray-600 sm:static sm:w-1/2 sm:px-0 sm:bg-slate-100 dark:bg-slate-800 dark:text-gray-200"
+        className="bg-slate-200 w-2/3 hidden px-4 absolute top-0 left-0 bottom-0 right-full sm:block font-semibold text-xl text-gray-600 sm:static sm:w-1/2 sm:px-0 sm:bg-slate-100 dark:bg-slate-900 dark:text-gray-200"
       >
         <div
         className="h-full flex items-center justify-around sm:justify-between">
