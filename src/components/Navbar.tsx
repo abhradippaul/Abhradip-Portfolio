@@ -61,7 +61,7 @@ function Navbar() {
       <motion.div
         variants={item}
         id="sideMenu"
-        className="bg-slate-200 w-2/3 hidden px-4 absolute top-0 left-0 bottom-0 right-full sm:block font-semibold text-xl text-gray-600 sm:static sm:w-1/2 sm:px-0 sm:bg-slate-100 dark:bg-slate-900 dark:text-gray-200"
+        className="bg-black w-full z-50 px-4 absolute top-0 left-0 bottom-0 right-0 sm:block font-semibold text-xl text-gray-600 sm:static sm:w-1/2 sm:px-0 sm:bg-slate-100 dark:bg-slate-900 dark:text-gray-200"
       >
         <div className="h-full flex items-center justify-around sm:justify-between">
           <ul className="h-[40%] w-full flex flex-col items-center justify-around sm:flex-row sm:justify-between">
@@ -87,8 +87,8 @@ function Navbar() {
           // }}
           className={`fa-solid ${true ? "fa-moon" : "fa-sun"} cursor-pointer`}
         ></i>
-        <i className="fa-brands fa-github cursor-pointer"></i>
-        <i className="fa-brands fa-linkedin cursor-pointer"></i>
+        <a href="https://github.com/abhradippaul" target="_blank"><i className="fa-brands fa-github cursor-pointer"></i></a>
+        <a href="https://www.linkedin.com/in/abhradip-paul/" target="_blank"><i className="fa-brands fa-linkedin cursor-pointer"></i></a>
       </motion.div>
     </motion.div>
   );

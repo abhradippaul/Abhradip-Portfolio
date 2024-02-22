@@ -1,33 +1,9 @@
 import Card from "./Card";
-import reactImg from "../../public/frontend.jpg";
-import backend from "../../public/backend.png";
-import aws from "../../public/aws.png";
-import addtional from "../../public/additional.png";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { experiences } from "@/WebsiteInfo";
 
 function TypesOfWork() {
-  const experiences = [
-    {
-      name: "Frontend Developer",
-      image: reactImg,
-      des: "I have experience in HTML, CSS, JavaScript, ReactJS, TypeScript, Api handeling, and Tailwind.",
-    },
-    {
-      name: "Backend Developer",
-      image: backend,
-      des: "I have experience creating REST APIs, including advanced APIs, using Node.js for the backend and MongoDB for the database.",
-    },
-    {
-      name: "AWS Services",
-      image: aws,
-      des: "I have utilized AWS services such as EC2 instances, S3 buckets, and Lambda functions for all of my projects.",
-    },
-    {
-      name: "Additional",
-      image: addtional,
-      des: "I use Git and GitHub for version control. Additionally, I have experience with Docker, Nginx, and Linux.",
-    },
-  ];
+  
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
   return (
