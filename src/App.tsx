@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import TypesOfWork from "./components/TypesOfWork";
-import PortfolioSection from "./components/PortfolioSection";
-import SkillSection from "./components/SkillSection";
-import Review from "./components/Review";
-import Contact from "./components/Contact";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Page/Home";
+import Projects from "./Page/Projects";
+import Aboutme from "./Page/Aboutme";
 // import {ThemeContextProvider} from "./context/ThemeContext.js"
 
 function App() {
@@ -20,12 +18,11 @@ function App() {
       <div className="bg-slate-100 fixed left-0 right-0 top-0 z-50 shadow-sm dark:shadow-white dark:bg-slate-900">
         <Navbar />
       </div>
-      <HeroSection />
-      <TypesOfWork />
-      <PortfolioSection />
-      <SkillSection />
-      <Review />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/aboutme" element={<Aboutme />} />
+      </Routes>
     </div>
     // </ThemeContextProvider>
   );

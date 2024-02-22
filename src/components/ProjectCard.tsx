@@ -15,7 +15,6 @@ function ProjectCard({
   githubLink,
   websiteLink,
 }: valueProps) {
-  const shortDes = description.slice(0, 130);
   return (
     <div className="h-96 w-72 rounded-md bg-white shadow-md p-4 flex flex-col items-center justify-between m-4 relative dark:bg-slate-900 dark:shadow-slate-700">
       <div className="absolute px-2 rounded-t-sm top-[50%] z-10 bg-white translate-y-[-100%] font-semibold dark:bg-slate-950">
@@ -35,7 +34,7 @@ function ProjectCard({
       </div>
       <h1 className="text-3xl my-2">{name}</h1>
       <div className="overflow-hidden">
-        <p className="text-gray-700 dark:text-gray-300">{shortDes}</p>
+        <p className="text-gray-700 dark:text-gray-300">{description}</p>
       </div>
     </div>
   );

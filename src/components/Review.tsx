@@ -5,8 +5,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ContactCard from "./ContactCard";
 
 function Review() {
+  const cardData = {name:"Review", text: "Say Someting"}
   return (
     <div className="dark:bg-slate-950 bg-slate-200">
       <div className="bg-slate-200 max-w-7xl m-auto min-h-dvh flex items-center justify-around flex-col dark:bg-slate-950  ">
@@ -27,6 +29,7 @@ function Review() {
             <CarouselNext />
           </Carousel>
         </div>
+        <ContactCard {...cardData} />
       </div>
     </div>
   );
