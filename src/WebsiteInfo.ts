@@ -37,8 +37,8 @@ export const myProject = [
         category: "others",
         description: "User can add, modify, delete, and mark tasks as done.",
         image: todolist,
-        githubLink: "https://react-todo-list-local-storage.vercel.app/",
-        websiteLink: "https://github.com/abhradippaul/React-TodoList-LocalStorage"
+        githubLink: "https://github.com/abhradippaul/React-TodoList-LocalStorage",
+        websiteLink: "https://react-todo-list-local-storage.vercel.app/"
     },
 
 ]

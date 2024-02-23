@@ -3,20 +3,42 @@ import ProjectCard from "./ProjectCard"
 import PortfolioCategoryBtn from "./PortfolioCategoryBtn"
 import {myProject} from "../WebsiteInfo.ts"
 import { categoryProject } from "../WebsiteInfo.ts"
+import { motion } from "framer-motion";
 
 function PortfolioSection() {
   const [category,setCategory] = useState("all")
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
-    <div className=" bg-slate-200">
-      <div className='max-w-7xl m-auto min-h-dvh flex items-center flex-col justify-around  dark:bg-slate-950'>
-        <h1 className='text-4xl text-gray-700 m-8 dark:text-gray-300 text-center'>My <span className='text-blue-700 dark:text-white'>Portfolio</span> Section</h1>
-        <div className='flex items-center justify-around m-4'>
+    <div className=" bg-slate-200 dark:bg-slate-950">
+      <motion.div className='max-w-7xl m-auto min-h-dvh flex items-center flex-col justify-around  dark:bg-slate-950' 
+        initial="hidden"
+        animate="visible" variants={container}>
+        <motion.h1 variants={item} className='text-4xl text-gray-700 m-8 dark:text-gray-300 text-center'>My <span className='text-blue-700 dark:text-white'>Portfolio</span> Section</motion.h1>
+        <motion.div variants={item} className='flex items-center justify-around m-4'>
           {
             categoryProject.map((e) => <PortfolioCategoryBtn category={e} setCategory={setCategory} />)
           }
           
-        </div>
-        <div className="flex items-center justify-around flex-wrap">
+        </motion.div>
+        <motion.div variants={item} className="flex items-center justify-around flex-wrap">
           {
             myProject.map((e) => {
                 if(e.category === category || category === "all") {
@@ -24,8 +46,8 @@ function PortfolioSection() {
                 }
             })
           }
-        </div>
-    </div>
+        </motion.div>
+    </motion.div>
     </div>
   )
 }
