@@ -61,21 +61,20 @@ function Navbar({setTheme,theme} : any) {
       <motion.div
         variants={item}
         id="sideMenu"
-        className="bg-slate-300 hidden fixed top-0 bottom-0 right-0 left-0 sm:block font-semibold text-xl text-gray-600 sm:static sm:w-1/2 sm:px-0 sm:bg-slate-100 dark:bg-slate-900 dark:text-gray-200"
-      >
-        <div className="h-full w-full flex items-center justify-around sm:justify-between">
-          <ul className="h-full w-full flex flex-col items-center justify-around sm:flex-row sm:justify-between">
-            <li className="cursor-pointer tracking-wider hover:text-black dark:hover:text-white">
+        className="backdrop-blur-sm bg-black bg-opacity-50  hidden fixed top-0 bottom-0 right-0 left-0 sm:block font-semibold text-xl text-gray-600 sm:static sm:w-1/2 sm:px-0 sm:bg-slate-100 dark:bg-slate-900 dark:text-gray-200 dark:bg-opacity-50">
+        <div className="h-full w-full flex items-center justify-center sm:justify-between">
+          <ul className="h-1/2 w-full flex flex-col items-center justify-around sm:flex-row sm:justify-between">
+            <li className={`cursor-pointer ${sidebar?"text-white":""} tracking-wider hover:text-black dark:hover:text-white`}>
               <Link to="/" onClick={() => {
                 hamburgerMenu()
               }}>HOME</Link>
             </li>
-            <li className="cursor-pointer tracking-wider hover:text-black dark:hover:text-white">
+            <li className={`cursor-pointer ${sidebar?"text-white":""} tracking-wider hover:text-black dark:hover:text-white`}>
               <Link to="/projects" onClick={() => {
                 hamburgerMenu()
               }}>PROJECTS</Link>
             </li>
-            <li className="cursor-pointer tracking-wider hover:text-black dark:hover:text-white">
+            <li className={`cursor-pointer ${sidebar?"text-white":""} tracking-wider hover:text-black dark:hover:text-white`}>
               <Link to="/aboutme" onClick={() => {
                 hamburgerMenu()
               }}>ABOUT ME</Link>

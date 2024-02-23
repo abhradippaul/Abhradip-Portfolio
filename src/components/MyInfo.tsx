@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import resume from "/public/resume.pdf"
 function MyInfo() {
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -42,7 +43,7 @@ function MyInfo() {
         className="bg-blue-600 rounded-md text-white text-xl px-4 py-2 hover:bg-blue-700"
         variants={item}
       >
-        Download Resume
+        <a href={resume} target="_blank">Download Resume</a>
       </motion.button>
     </motion.div>
   );

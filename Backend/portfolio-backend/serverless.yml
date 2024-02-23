@@ -1,9 +1,12 @@
+org: abhradip
+app: portfolio-serverless
 service: portfolio-backend
 frameworkVersion: '3'
 
 provider:
   name: aws
   runtime: nodejs18.x
+  region: ap-south-1
 
 functions:
   api:

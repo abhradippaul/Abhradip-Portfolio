@@ -54,10 +54,10 @@ function HeroSection() {
           </div>
           <div className="w-full flex items-center flex-wrap justify-between h-[25%] py-4 border-red-400">
             <button className="h-full font-semibold w-[80%] max-w-40 bg-blue-800 hover:bg-blue-900 text-slate-200 rounded-md text-xl my-2 cursor-pointer dark:hover:bg-blue-700">
-              <Link to="/aboutme">Contact Me</Link>
+              <a href="#contactme">Contact Me</a>
             </button>
             <button className="h-full font-semibold w-[80%] bg-white hover:bg-slate-100 my-2  rounded-md text-xl px-2 cursor-pointer max-w-40 dark:bg-slate-900 dark:hover:bg-slate-800">
-              Send Feedback
+              <a href="#review">Review</a>
             </button>
           </div>
         </motion.div>

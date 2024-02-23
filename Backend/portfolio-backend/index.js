@@ -77,8 +77,8 @@ app.post("/contact", async (req, res) => {
 //     error: "Not Found",
 //   });
 // });
-app.listen(80, () => {
-  console.log("Server connected")
-})
+// app.listen(80, () => {
+//   console.log("Server connected")
+// })
 
-// module.exports.handler = serverless(app);
+module.exports.handler = serverless(app);
