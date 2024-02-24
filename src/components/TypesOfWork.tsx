@@ -1,9 +1,6 @@
 import Card from "./Card";
 import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useScroll,
+  motion
 } from "framer-motion";
 import { experiences } from "@/WebsiteInfo";
 
@@ -21,7 +18,7 @@ function TypesOfWork() {
         </h1>
         <div className="flex items-center justify-around flex-wrap">
           {experiences.map((e) => (
-            <Card {...e} />
+            <Card {...e} key={e.name} />
           ))}
         </div>
       </div>

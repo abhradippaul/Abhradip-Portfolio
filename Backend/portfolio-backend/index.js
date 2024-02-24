@@ -4,6 +4,8 @@ const express = require("express");
 const { feedbackModel } = require("./feedback.model");
 const contactModel = require("./contact.model");
 const app = express();
+const cors = require("cors")
+app.use(cors())
 app.use(express.urlencoded({extended :true}))
 app.use(express.json())
 require("./dbConnection")
@@ -22,7 +24,7 @@ app.get("/feedback", async (req, res) => {
 
 app.post("/feedback", async (req, res) => {
   try {
-    // console.log(req.body)
+    console.log(req.body)
     const { name, email, text } = req.body
     if (!name || !text) {
       return res.status(400).json({
@@ -48,6 +50,7 @@ app.post("/feedback", async (req, res) => {
 })
 app.post("/contact", async (req, res) => {
   try {
+    console.log(req.body)
     const { name, email, text } = req.body
     if (!name || !text || !email) {
       return res.status(400).json({

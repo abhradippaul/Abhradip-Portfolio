@@ -16,7 +16,7 @@ function SkillSection() {
         </h1>
         <div className="w-[90%] flex items-center justify-center flex-wrap">
           {skillList.map((e) => (
-            <SkillCard {...e} />
+            <SkillCard {...e} key={e.name} />
           ))}
         </div>
       </div>

@@ -1,24 +1,46 @@
+import { postData } from "@/fetch";
 import { useState } from "react";
 
 type valueProps = {
   name: string;
   text: string;
 };
+type UserValue = {
+  userName: string;
+  email: string;
+  userText: string;
+};
 
 function ContactCard({ name, text }: valueProps) {
-  const [value, setValue] = useState({});
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [userText, setUserText] = useState("");
-  console.log(value);
+  const submitData = async ({ userName, email, userText }: UserValue) => {
+    if (name === "Contact") {
+      const response = await postData("/contact", {
+        name : userName,
+        email,
+        text : userText,
+      });
+      console.log(response);
+    } else {
+      const response = await postData("/feedback", {
+        name : userName,
+        email,
+        text : userText,
+      });
+      // console.log(response);
+      // location.reload()
+    }
+  };
   return (
     <form
       className={`w-[90%] max-w-[600px] min-h-96 flex flex-col bg-white justify-around py-4 px-8 rounded-md ${
         name === "Contact" ? "dark:bg-slate-950" : "dark:bg-slate-900"
       } `}
       onSubmit={(e) => {
-        e.preventDefault()
-        setValue({
+        e.preventDefault();
+        submitData({
           userName,
           email,
           userText,
@@ -35,6 +57,7 @@ function ContactCard({ name, text }: valueProps) {
           className="w-[70%] bg-slate-100 outline-none border-none px-2 py-1 rounded-sm dark:text-black"
           type="text"
           value={userName}
+          name="name"
           required
           id="name"
           onChange={(e) => {
@@ -49,7 +72,8 @@ function ContactCard({ name, text }: valueProps) {
           placeholder={name === "Review" ? "Optional" : ""}
           type="text"
           id="email"
-          required={name==="Contact"?true:false}
+          name="email"
+          required={name === "Contact" ? true : false}
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -62,6 +86,7 @@ function ContactCard({ name, text }: valueProps) {
           className="w-[70%] bg-slate-100 outline-none border-none px-2 py-1 dark:text-black rounded-sm"
           required
           id="text"
+          name="text"
           value={userText}
           onChange={(e) => {
             setUserText(e.target.value);

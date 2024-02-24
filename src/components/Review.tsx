@@ -7,9 +7,17 @@ import {
 } from "@/components/ui/carousel";
 import ContactCard from "./ContactCard";
 import { motion } from "framer-motion";
+import { fetchingData } from "@/fetch";
+import { useEffect, useState } from "react";
 
 function Review() {
   const cardData = { name: "Review", text: "Say Someting" };
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetchingData("/feedback").then((value) => {
+      setData(value.reverse());
+    });
+  }, []);
   return (
     <motion.div
       id="review"
@@ -23,21 +31,20 @@ function Review() {
         <div className="w-[90%] max-w-[600px]">
           <Carousel>
             <CarouselContent>
-              <CarouselItem className="min-h-52 w-full  bg-white dark:bg-slate-900 dark:text-white">
-                <div className="relative flex items-center justify-center w-full h-full p-8">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores odio ipsam quod accusamus obcaecati, hic
-                    repellendus. Eos eum inventore, unde facere vitae veritatis
-                    ipsa, corporis, a ipsum natus ullam et!
-                  </p>
-                  <h1 className="absolute bottom-[10%] right-[10%] text-gray-700 dark:text-gray-300">
-                    - Abhradip Paul
-                  </h1>
-                </div>
-              </CarouselItem>
-              <CarouselItem>Review2</CarouselItem>
-              <CarouselItem>Review3</CarouselItem>
+              {data.map((e:any) => {
+                return (
+                  <CarouselItem key={e.text} className="min-h-52 w-full  bg-white dark:bg-slate-900 dark:text-white">
+                    <div className="relative flex items-center justify-center w-full h-full p-8">
+                      <p>
+                        {e.text}
+                      </p>
+                      <h1 className="absolute bottom-[10%] right-[10%] text-gray-700 dark:text-gray-300">
+                        - {e.name}
+                      </h1>
+                    </div>
+                  </CarouselItem>
+                );
+              })}
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
