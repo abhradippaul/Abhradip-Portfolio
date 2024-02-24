@@ -17,14 +17,14 @@ function ContactCard({ name, text }: valueProps) {
   const [userText, setUserText] = useState("");
   const submitData = async ({ userName, email, userText }: UserValue) => {
     if (name === "Contact") {
-      const response = await postData("/contact", {
+      await postData("/contact", {
         name : userName,
         email,
         text : userText,
       });
-      console.log(response);
+      // console.log(response);
     } else {
-      const response = await postData("/feedback", {
+      await postData("/feedback", {
         name : userName,
         email,
         text : userText,

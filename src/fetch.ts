@@ -4,8 +4,7 @@ export const fetchingData = async(url:string) => {
 };
 
 export const postData = async (url: string, data: object) => {
-  console.log(data);
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}${url}`, {
+  await fetch(`${import.meta.env.VITE_BACKEND_URL}${url}`, {
     method: "POST",
     mode: "cors",
     cache: "no-cache",
@@ -16,5 +15,5 @@ export const postData = async (url: string, data: object) => {
     body: JSON.stringify(data),
   });
   //   console.log(response);
-  return await response.json();
+  
 };
