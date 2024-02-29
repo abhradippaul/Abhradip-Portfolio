@@ -12,7 +12,7 @@ This portfolio showcases my skills, projects, and experience. It provides an ove
 - CSS
 - JavaScript
 - React
-- Bootstrap
+- TailwindCss
 
 ## Features
 
@@ -46,9 +46,6 @@ npm start
 
 5. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the website.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
