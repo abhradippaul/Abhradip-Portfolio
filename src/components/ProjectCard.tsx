@@ -22,8 +22,20 @@ function ProjectCard({
       </div>
       <div className="w-full h-[50%] rounded-md overflow-hidden relative child-hover:opacity-100 cursor-pointer border">
         <div className="absolute top-0 bottom-0 left-0 right-0 md:opacity-0 bg-black bg-opacity-50">
-        <a href={websiteLink} target="_blank"><i className="fa-solid fa-link text-white absolute left-[30%] top-[45%] text-2xl">  </i></a>
-          <a href={githubLink} target="_blank"><i className="fa-brands fa-github text-white absolute right-[30%] top-[45%] text-2xl">  </i></a>
+          {websiteLink ? (
+            <a href={websiteLink} target="_blank">
+              <i className="fa-solid fa-link text-white absolute left-[30%] top-[45%] text-2xl">
+                {" "}
+              </i>
+            </a>
+          ) : (
+            <a></a>
+          )}
+          <a href={githubLink} target="_blank">
+            <i className="fa-brands fa-github text-white absolute right-[30%] top-[45%] text-2xl">
+              {" "}
+            </i>
+          </a>
         </div>
         <img
           className="h-full w-full object-cover"
