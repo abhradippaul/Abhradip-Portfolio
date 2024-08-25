@@ -149,7 +149,7 @@ export const projects = [
   {
     id: 4,
     title: "Church Management Website",
-    des: "This Church Management Website is designed to streamline church operations by reducing manual tasks through a comprehensive web application. Leveraging a modern tech stack—**Next.js** for the front-end, **Node.js** for the back-end, **MongoDB** for data storage, **Resend** for email communication, **Razorpay** for payment processing, and **Shadcn** for UI components, all built with **TypeScript**—the platform enables churches to efficiently manage visitor information, track attendance, schedule events, organize visitors into groups, and accept online donations. This solution enhances the church's ability to engage with its community, focusing on their mission rather than administrative tasks.",
+    des: "This Church Management Website is designed to streamline church operations by reducing manual tasks through a comprehensive web application. Leveraging a modern tech stack—**Next.js** for the front-end, **Node.js** for the back-end, **MongoDB** for data storage, **Resend** for email communication, **Razorpay** for payment processing, and **Shadcn** for UI components, all built with **TypeScript**—the platform enables churches to efficiently manage visitor information, track attendance, schedule events, organize visitors into groups, and accept online donations. This solution enhances the church &apos; ability to engage with its community, focusing on their mission rather than administrative tasks.",
     image: "/jn2frkplevgacy3guxe9",
     videoLink: "https://www.youtube.com/embed/c9rVzqOlCQU?si=7zlsu9YAR1VreZoz",
     iconLists: [
@@ -189,31 +189,31 @@ export const projectCategory = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian&apos;s enthusiasm for every facet of development truly stands out. If you&apos;re seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian&apos;s enthusiasm for every facet of development truly stands out. If you&apos;re seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian&apos;s enthusiasm for every facet of development truly stands out. If you&apos;re seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian&apos;s enthusiasm for every facet of development truly stands out. If you&apos;re seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian&apos;s enthusiasm for every facet of development truly stands out. If you&apos;re seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },

@@ -1,5 +1,5 @@
 import FeedbackForm from "./FeedbackForm";
-import { InfiniteMovingCards } from "./ui/InfiniteMovingCard";
+// import { InfiniteMovingCards } from "./ui/InfiniteMovingCard";
 
 async function Clients() {
   // const response = await fetch(

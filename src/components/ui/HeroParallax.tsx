@@ -12,7 +12,7 @@ import { useRef } from "react";
 
 const imageUrl = process.env.NEXT_PUBLIC_CLOUDINARY_URL;
 
-export default () => {
+const HeroParalax = () => {
   const firstRow = projects.reverse().slice(0, 3);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -75,6 +75,8 @@ export default () => {
     </div>
   );
 };
+
+export default HeroParalax;
 
 export const Header = () => {
   return (

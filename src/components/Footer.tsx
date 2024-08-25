@@ -18,11 +18,11 @@ function Footer() {
           presence to next level?{" "}
         </h1>
         <p className="text-white-200 md:mt-10 my-5">
-          Reach out to me today and let's discuss how can I help your goals.
+          Reach out to me today and let&apos;s discuss how can I help your goals.
         </p>
         <a href="mailto:abhradippaulwork@gmail.com">
           <MagicButton icon={<FaLocationArrow />} position="right">
-            Let's get in touch
+            Let&apos;s get in touch
           </MagicButton>
         </a>
       </div>
