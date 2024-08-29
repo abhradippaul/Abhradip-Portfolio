@@ -6,7 +6,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/iuwpgpdfrl59wyijo8n7",
     spareImg: "",
   },
   {
@@ -36,8 +36,8 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
+    img: "/rfo8ifilpcq5clfkk0es",
+    spareImg: "/rfo8ifilpcq5clfkk0es",
   },
 
   {
@@ -47,8 +47,8 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
+    img: "/aqsxla39wskyr0mczxkd",
+    spareImg: "/aqsxla39wskyr0mczxkd",
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+    titleClassName: "justify-center text-center",
     img: "",
     spareImg: "",
   },
@@ -227,10 +227,6 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/abhradip-paul/",
   },

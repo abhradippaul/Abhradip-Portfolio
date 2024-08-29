@@ -5,12 +5,11 @@ import Image from "next/image";
 import { BackgroundGradientAnimation } from "./BackgroundGradient";
 import { GridGlobe } from "./GridGlobe";
 import Lottie from "react-lottie";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { TiTick } from "react-icons/ti";
-import { useRouter } from "next/navigation";
 
 const url = process.env.NEXT_PUBLIC_CLOUDINARY_URL;
 
@@ -53,7 +52,6 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
-  const navigate = useRouter();
   const handleClick = () => {
     navigator.clipboard.writeText("abhradippaulwork@gmail.com");
     setCopied(true);
@@ -73,7 +71,7 @@ export const BentoGridItem = ({
     >
       {img && id !== 6 && (
         <Image
-          src={img}
+          src={`${url}/f_auto,q_auto/v1/portfolio${img}`}
           alt={img}
           fill
           className={cn(
@@ -85,7 +83,7 @@ export const BentoGridItem = ({
       )}
       {spareImg && id === 4 && (
         <Image
-          src={spareImg}
+          src={`${url}/f_auto,q_auto/v1/portfolio${spareImg}`}
           alt={spareImg}
           fill
           className={cn(
@@ -125,18 +123,24 @@ export const BentoGridItem = ({
       {id === 6 && (
         <BackgroundGradientAnimation
           containerClassName="size-full absolute"
-          className="relative z-50 flex items-center justify-center text-white-100 font-bold"
+          className="relative z-50 items-center text-white-100 font-bold flex flex-col justify-around size-full"
         >
-          {/* <div className="absolute z-50 flex items-center justify-center text-white-100 font-bold bottom-0"> */}
+          <div
+            className={cn(
+              "font-sans text-lg lg:text-2xl size-full font-bold z-10 my-4 md:my-1 lg:my-0",
+              titleClassName
+            )}
+          >
+            {title}
+          </div>
           <MagicButton
-            className="-bottom-[10%]"
+            className="absolute bottom-[10%] w-[90%] lg:bottom-0 z-50"
             icon={copied ? <TiTick /> : <IoCopyOutline />}
             otherClassName="!bg-[161a31]"
             handleClick={handleClick}
           >
             {copied ? "Email copied" : "Copy my email"}
           </MagicButton>
-          {/* </div> */}
         </BackgroundGradientAnimation>
       )}
       {id === 6 && (
@@ -165,15 +169,15 @@ export const BentoGridItem = ({
           id === 5 && "absolute top-[-5%]"
         )}
       >
-        {id !== 5 && (
+        {id !== 5 && id !== 6 && (
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
         )}
-        {id !== 5 && (
+        {id !== 5 && id !== 6 && (
           <div
             className={cn(
-              "font-sans text-lg lg:text-3xl max-w-96 font-bold z-10",
+              "font-sans text-lg lg:text-3xl size-full font-bold z-10",
               titleClassName
             )}
           >
@@ -181,14 +185,13 @@ export const BentoGridItem = ({
           </div>
         )}
         {id === 5 && (
-          <MagicButton
-            handleClick={() =>
-              navigate.push(
-                `${url}/f_auto,q_auto/v1/portfolio/fm0vbye6uhmwqxmax1yf`
-              )
-            }
-          >
-            {title as string}
+          <MagicButton>
+            <a
+              target="_blank"
+              href={`${url}/f_auto,q_auto/v1/portfolio/fm0vbye6uhmwqxmax1yf`}
+            >
+              {title as string}
+            </a>
           </MagicButton>
         )}
       </div>

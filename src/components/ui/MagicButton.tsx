@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
 interface Props {
-  children: string;
+  children: string | ReactNode;
   icon?: ReactNode;
   className?: string;
   handleClick?: () => void;
